@@ -15,7 +15,7 @@ import time
 #credentials
 #GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\Jumper.ai\Desktop\Projects\packages\jumper.json"
 #dev_GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\Jumper.ai\Desktop\Projects\packages\jumperdevnew.json"
-GOOGLE_APPLICATION_CREDENTIALS = '/home/brian/jumperdevnew.json'
+GOOGLE_APPLICATION_CREDENTIALS = '/home/jupyter/AnalyzeSentiment/jumperdevnew.json'
 
 client = bigquery.Client.from_service_account_json(GOOGLE_APPLICATION_CREDENTIALS)
 

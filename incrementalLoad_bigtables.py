@@ -1,19 +1,23 @@
-import BigQuery_DatastoreIncrementalLoad as bq
+import BigQuery_DatastoreIncrementalLoad_dev as bq
 
-tables = [{'table':'ConversationAgentlog','dataset':'datastore','created':'created', 'hour' : 24, 'chunksize' : 60 }
-            ,{'table':'ConversationAgentlog','dataset':'datastore','created':'stopped', 'hour' : 0, 'chunksize' : 60 }
-           ,{'table':'Dashboard_conversation','dataset':'datastore','created':'created', 'hour' : 24, 'chunksize' : 60 }
-           ,{'table':'User','dataset':'datastore','created':'lastActiveTime','hour': 0, 'chunksize' : 30 }
-           ,{'table':'ProxyUser','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 60 }
-           ,{'table':'TouchPoint','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 60 }
-           ,{'table':'Authkey','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 60 }
-           ,{'table':'Variation','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 60 }
-           ,{'table':'Conversation','dataset':'datastore','created':'time','hour': 0, 'chunksize' : 60 , 'byte_field' : 'headerinfo'}
-           ,{'table':'Order','dataset':'datastore','created':'time','hour': 0, 'chunksize' : 60, 'byte_field' : 'variables'}
-           ,{'table':'ConversationCustomField','dataset':'datastore','created':'updated','hour': 0, 'chunksize' : 60}
-           ,{'table':'Messenger','dataset':'datastore','created':'created', 'hour' : 0, 'chunksize' : 60 }
-           ,{'table':'Cart','dataset':'datastore','created':'modified', 'hour' : 0, 'chunksize' : 60 }
-           ,{'table':'Historic_dashboard_conversation','dataset':'datastore','created':'created', 'hour' : 0, 'chunksize' : 60 }
+tables = [{'table':'ConversationAgentlog','dataset':'datastore','created':'created', 'hour' : 24, 'chunksize' : 1440 }
+            ,{'table':'ConversationAgentlog','dataset':'datastore','created':'stopped', 'hour' : 0, 'chunksize' : 1440 }
+           ,{'table':'Dashboard_conversation','dataset':'datastore','created':'created', 'hour' : 24, 'chunksize' : 1440 }
+           ,{'table':'User','dataset':'datastore','created':'lastActiveTime','hour': 0, 'chunksize' : 1440 }
+           ,{'table':'ProxyUser','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 1440 }
+           ,{'table':'TouchPoint','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 1440 }
+           ,{'table':'Authkey','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 1440 }
+           ,{'table':'Variation','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 1440 }
+           ,{'table':'Conversation','dataset':'datastore','created':'time','hour': 0, 'chunksize' : 1440 , 'byte_field' : 'headerinfo'}
+           ,{'table':'Order','dataset':'datastore','created':'time','hour': 0, 'chunksize' : 1440, 'byte_field' : 'variables'}
+           ,{'table':'ConversationCustomField','dataset':'datastore','created':'updated','hour': 0, 'chunksize' : 1440}
+           ,{'table':'Messenger','dataset':'datastore','created':'created', 'hour' : 0, 'chunksize' : 1440 }
+           ,{'table':'Cart','dataset':'datastore','created':'modified', 'hour' : 0, 'chunksize' : 1440 }
+           ,{'table':'Historic_dashboard_conversation','dataset':'datastore','created':'created', 'hour' : 0, 'chunksize' : 1440 }
+           ,{'table':'ChatInbox','dataset':'datastore','created':'created','hour': 0, 'chunksize' : 60 , 'byte_field' : 'template'}
+           ,{'table':'Coupon','dataset':'datastore','created':'modified', 'hour' : 0, 'chunksize' : 60 }
+           ,{'table':'CodeDiscountList','dataset':'datastore','created':'updated', 'hour' : 0, 'chunksize' : 1440 }
+           ,{'table':'Audittrails','dataset':'datastore','created':'created', 'hour' : 0, 'chunksize' : 60 }
 ]
 
 for t in tables:
